@@ -26,8 +26,7 @@ export default function LatestPostsGroupMini({ latestPosts, siteInfo }) {
         </div>
       </div>
       {latestPosts.map(post => {
-        const selected =
-          currentPath === `${SUB_PATH}/${post.slug}`
+        const selected = currentPath === `${SUB_PATH}/${post.slug}`
         const headerImage = post?.pageCoverThumbnail
           ? post.pageCoverThumbnail
           : siteInfo?.pageCover
@@ -53,7 +52,7 @@ export default function LatestPostsGroupMini({ latestPosts, siteInfo }) {
               }>
               <div>
                 <div className='line-clamp-2 menu-link'>{post.title}</div>
-                <div className='text-gray-400'>{post.lastEditedDay}</div>
+                <div className='text-gray-400'>{post.publishDay}</div>
               </div>
             </div>
           </Link>
